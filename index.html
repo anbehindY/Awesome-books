@@ -8,24 +8,33 @@
     <link rel="stylesheet" href="index.css" />
   </head>
   <body>
-      <section class="container">
-        <h1 id="text">Awesome Books</h1>
-        <p>Lorem ipsum <br> Testero testyy</p>
-        <button type="submit">Remove</button>
-        <hr>
-        <p>Lorem ipsum <br> Testero testyy</p>
-        <button type="submit">Remove</button>
-        <hr>
-        <ul id="list-holder"></ul>
-        <div id="myinputs">
-          <input type="text" id="input" placeholder="Title" />
-          <br><br>
-          <input type="text" id="input1" placeholder="Author" />
-          <br><br>
-          <button type='submit' id="bttn">Add</button>
-          <p id="error"></p>
+    <section class="container">
+      <h1 id="text">Awesome Books</h1>
+      <div class="collection">
+        <div class="book">
+          <div class="book-title">Test Title</div>
+          <div class="book-autor">Test Author</div>
+          <button class="removeBookBtn Btn-${i}">Remove</button>
+          <hr />
         </div>
-      </section>
-    <script type="module" src="index.js"></script>
+
+        <div class="book">
+          <div class="book-title">Test Title</div>
+          <div class="book-autor">Test Author</div>
+          <button class="removeBookBtn Btn-${i}">Remove</button>
+          <hr />
+        </div>
+      </div>
+
+      <div id="myinputs">
+        <input type="text" id="title" placeholder="Title" />
+        <br /><br />
+        <input type="text" id="author" placeholder="Author" />
+        <br /><br />
+        <button type="submit" id="addBookBtn">Add</button>
+        <!-- <p id="error"></p> -->
+      </div>
+    </section>
+    <script src="script.js"></script>
   </body>
 </html>
