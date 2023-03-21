@@ -3,91 +3,104 @@ const inputAuthor = document.querySelector('#author');
 const bookUI = document.querySelector('.collection');
 const addBookBtn = document.querySelector('#addBookBtn');
 
-const BOOKS_KEY = 'awesome-books';
+class BookCollectionTemplete {
+  constructor() {
+    this.BOOKS_KEY = 'awesome-books';
+    this.bookCollection = JSON.parse(localStorage.getItem(this.BOOKS_KEY)) || [
+      {
+        title: 'First Book',
+        author: 'First Author',
+      },
+      {
+        title: 'Second Book',
+        author: 'Second Auhtor',
+      },
+    ];
+  }
 
-// book collection: array of objects
-const bookCollection = JSON.parse(localStorage.getItem(BOOKS_KEY)) || [
-  {
-    title: 'First Book',
-    author: 'First Author',
-  },
-  {
-    title: 'Second Book',
-    author: 'Second Auhtor',
-  },
-];
+  // this functions saves book collections to local storage
+  saveBooks() {
+    localStorage.setItem(this.BOOKS_KEY, JSON.stringify(this.bookCollection));
+  }
 
-// this functions saves book collections to local storage
-function saveBooks() {
-  localStorage.setItem(BOOKS_KEY, JSON.stringify(bookCollection));
-}
+  // this function updates the UI with new books from book collection
+  displayBookCollection() {
+    bookUI.innerHTML = '';
 
-// this function updates the UI with new books from book collection
-function displayBookCollection() {
-bookUI.innerHTML = '';
-
-  for (let i = 0; i < bookCollection.length; i += 1) {
-    if (i%2 === 0){
-      bookUI.innerHTML += `
+    for (let i = 0; i < this.bookCollection.length; i += 1) {
+      if (i % 2 === 0) {
+        bookUI.innerHTML += `
     <div class="book gray">
-      <div class="book-description">"${bookCollection[i].title}" by ${bookCollection[i].author}</div>
+      <div class="book-description">"${this.bookCollection[i].title}" by ${this.bookCollection[i].author}</div>
       <button class="removeBookBtn Btn-${i}">Remove</button>
     </div>`;
-    }else {
-      bookUI.innerHTML += `
+      } else {
+        bookUI.innerHTML += `
     <div class="book">
-      <div class="book-description">"${bookCollection[i].title}" by ${bookCollection[i].author}</div>
+      <div class="book-description">"${this.bookCollection[i].title}" by ${this.bookCollection[i].author}</div>
       <button class="removeBookBtn Btn-${i}">Remove</button>
     </div>`;
-    }; 
-  }
-}
-
-displayBookCollection();
-
-// this function adds a new book to the book collection
-function addNewBook() {
-  const title = inputTitle.value.trim();
-  const author = inputAuthor.value.trim();
-
-  // book constructor function
-  function BookTemplete(title, author) {
-    this.title = title;
-    this.author = author;
-  }
-
-  // checks if title and author is truthy
-  if (title && author) {
-    // checks if book is already in the book collection
-    if (
-      bookCollection.some(
-        (obj) => Object.is(obj.title.toLowerCase(), title.toLowerCase())
-          && Object.is(obj.author.toLowerCase(), author.toLowerCase()),
-      ) === false
-    ) {
-      // add new book to book collection
-      // save new book to local storage
-      // clear the inout fields for title and author
-      // and update bookUI to show the new book
-      const newBook = new BookTemplete(title, author);
-      bookCollection.push(newBook);
-
-      inputTitle.value = '';
-      inputAuthor.value = '';
-      saveBooks();
-      displayBookCollection();
+      }
     }
   }
+
+  // this function adds a new book to the book collection
+  addNewBook() {
+    const title = inputTitle.value.trim();
+    const author = inputAuthor.value.trim();
+
+    // book constructor function
+    function BookTemplete(title, author) {
+      this.title = title;
+      this.author = author;
+    }
+
+    // checks if title and author is truthy
+    if (title && author) {
+      // checks if book is already in the book collection
+      if (
+        this.bookCollection.some(
+          (obj) => Object.is(obj.title.toLowerCase(), title.toLowerCase())
+            && Object.is(obj.author.toLowerCase(), author.toLowerCase()),
+        ) === false
+      ) {
+        // add new book to book collection
+        // save new book to local storage
+        // clear the inout fields for title and author
+        // and update bookUI to show the new book
+        const newBook = new BookTemplete(title, author);
+        this.bookCollection.push(newBook);
+
+        inputTitle.value = '';
+        inputAuthor.value = '';
+        this.saveBooks();
+        this.displayBookCollection();
+      }
+    }
+  }
+
+  // this method removes a book from book collectiion
+  // this method is called in the init() method
+  removeBook() {
+    bookUI.addEventListener('click', (event) => {
+      if (event.target.classList.contains('removeBookBtn')) {
+        const index = event.target.classList[1].split('-')[1];
+        this.bookCollection.splice(index, 1);
+        this.displayBookCollection();
+        this.saveBooks();
+      }
+    });
+  }
+
+  // this method calls the removeBook() method
+  // this method calls the displayBookCollection() method
+  // triggers this.addNewBook() method when addBookBtn is clicked
+  init() {
+    this.removeBook();
+    this.displayBookCollection();
+    addBookBtn.addEventListener('click', this.addNewBook.bind(this));
+  }
 }
 
-addBookBtn.addEventListener('click', addNewBook);
-
-// removes a book from book collectiion
-bookUI.addEventListener('click', (event) => {
-  if (event.target.classList.contains('removeBookBtn')) {
-    const index = event.target.classList[1].split('-')[1];
-    bookCollection.splice(index, 1);
-    displayBookCollection();
-    saveBooks();
-  }
-});
+const bookCollection = new BookCollectionTemplete();
+bookCollection.init();
