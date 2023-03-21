@@ -3,7 +3,7 @@ const inputAuthor = document.querySelector('#author');
 const bookUI = document.querySelector('.collection');
 const addBookBtn = document.querySelector('#addBookBtn');
 
-class BookCollectionTemplete {
+class BookCollectionTemplate {
   constructor() {
     this.BOOKS_KEY = 'awesome-books';
     this.bookCollection = JSON.parse(localStorage.getItem(this.BOOKS_KEY)) || [
@@ -50,7 +50,7 @@ class BookCollectionTemplete {
     const author = inputAuthor.value.trim();
 
     // book constructor function
-    function BookTemplete(title, author) {
+    function BookTemplate(title, author) {
       this.title = title;
       this.author = author;
     }
@@ -68,7 +68,7 @@ class BookCollectionTemplete {
         // save new book to local storage
         // clear the inout fields for title and author
         // and update bookUI to show the new book
-        const newBook = new BookTemplete(title, author);
+        const newBook = new BookTemplate(title, author);
         this.bookCollection.push(newBook);
 
         inputTitle.value = '';
@@ -102,5 +102,5 @@ class BookCollectionTemplete {
   }
 }
 
-const bookCollection = new BookCollectionTemplete();
+const bookCollection = new BookCollectionTemplate();
 bookCollection.init();
