@@ -1,3 +1,69 @@
 * {
   box-sizing: border-box;
 }
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.collection {
+  width: 100%;
+  border: 2px solid black;
+  height: auto;
+  margin-bottom: 30px;
+}
+
+.book {
+  width: 100%;
+  height: 3%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 1% 2%;
+}
+
+.book.gray {
+  background: rgb(219, 219, 219);
+}
+
+.book-description {
+  font-weight: 600;
+  font-family: 'Lucida Sans', 'Lucida Grande', sans-serif;
+}
+
+.removeBookBtn {
+  margin-left: auto;
+  height: 90%;
+  background: none;
+  border: 2px solid black;
+  box-shadow: 2px 2px;
+}
+
+.blackBar {
+  width: 100px;
+  height: 2px;
+  background-color: #262626;
+}
+
+#myinputs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#title,
+#author {
+  width: 250px;
+  height: 30px;
+  border: 2px solid black;
+  box-shadow: 1px 1px;
+}
+
+#addBookBtn {
+  align-self: flex-end;
+  background: none;
+  border: 2px solid black;
+  box-shadow: 2px 2px;
+}
