@@ -10,20 +10,19 @@ const bookCollection = JSON.parse(localStorage.getItem(BOOKS_KEY)) || [
   {
     title: 'First Book',
     author: 'First Author',
-    available: true,
   },
   {
     title: 'Second Book',
     author: 'Second Auhtor',
-    available: true,
   },
 ];
 
+// this functions saves book collections to local storage
 function saveBooks() {
   localStorage.setItem(BOOKS_KEY, JSON.stringify(bookCollection));
 }
 
-// this functions updates the UI
+// this function updates the UI with new books from book collection
 function displayBookCollection() {
   bookUI.innerHTML = '';
 
@@ -46,35 +45,38 @@ function addNewBook() {
   const author = inputAuthor.value.trim();
 
   // book constructor function
-  function BookTemplete(title, author, available) {
+  function BookTemplete(title, author) {
     this.title = title;
     this.author = author;
-    this.available = available;
   }
 
-  // check if title and author is truthy
+  // checks if title and author is truthy
   if (title && author) {
-    // check if title is already in the book collection
+    // checks if book is already in the book collection
     if (
       bookCollection.some(
-        (item) => item.title.toLocaleLowerCase() === title.toLocaleLowerCase(),
+        (obj) => Object.is(obj.title.toLowerCase(), title.toLowerCase())
+          && Object.is(obj.author.toLowerCase(), author.toLowerCase()),
       ) === false
     ) {
-      const newBook = new BookTemplete(title, author, true);
+      // add new book to book collection
+      // save new book to local storage
+      // clear the inout fields for title and author
+      // and update bookUI to show the new book
+      const newBook = new BookTemplete(title, author);
       bookCollection.push(newBook);
 
       inputTitle.value = '';
       inputAuthor.value = '';
       saveBooks();
+      displayBookCollection();
     }
   }
-
-  displayBookCollection();
 }
 
 addBookBtn.addEventListener('click', addNewBook);
 
-// removes book from the book collectiion
+// removes a book from book collectiion
 bookUI.addEventListener('click', (event) => {
   if (event.target.classList.contains('removeBookBtn')) {
     const index = event.target.classList[1].split('-')[1];
