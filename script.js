@@ -24,16 +24,22 @@ function saveBooks() {
 
 // this function updates the UI with new books from book collection
 function displayBookCollection() {
-  bookUI.innerHTML = '';
+bookUI.innerHTML = '';
 
   for (let i = 0; i < bookCollection.length; i += 1) {
-    bookUI.innerHTML += `
-    <div class="book">
-      <div class="book-title">${bookCollection[i].title}</div>
-      <div class="book-autor">${bookCollection[i].author}</div>
+    if (i%2 === 0){
+      bookUI.innerHTML += `
+    <div class="book gray">
+      <div class="book-description">"${bookCollection[i].title}" by ${bookCollection[i].author}</div>
       <button class="removeBookBtn Btn-${i}">Remove</button>
-      <hr/>
     </div>`;
+    }else {
+      bookUI.innerHTML += `
+    <div class="book">
+      <div class="book-description">"${bookCollection[i].title}" by ${bookCollection[i].author}</div>
+      <button class="removeBookBtn Btn-${i}">Remove</button>
+    </div>`;
+    }; 
   }
 }
 
