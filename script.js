@@ -92,8 +92,8 @@ class BookCollectionTemplete {
     });
   }
 
-  // this method calls the removeBook() method
-  // this method calls the displayBookCollection() method
+  // this method calls the this.removeBook() method
+  // this method calls the this.displayBookCollection() method
   // triggers this.addNewBook() method when addBookBtn is clicked
   init() {
     this.removeBook();
