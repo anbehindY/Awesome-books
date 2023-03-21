@@ -6,31 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Awesome Books ES6</title>
     <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="styles.css">
   </head>
   <body>
     <section class="container">
-      <h1 id="text">Awesome Books</h1>
-      <div class="collection">
-        <div class="book">
-          <div class="book-title">Test Title</div>
-          <div class="book-autor">Test Author</div>
-          <button class="removeBookBtn Btn-${i}">Remove</button>
-          <hr />
-        </div>
-
-        <div class="book">
-          <div class="book-title">Test Title</div>
-          <div class="book-autor">Test Author</div>
-          <button class="removeBookBtn Btn-${i}">Remove</button>
-          <hr />
-        </div>
-      </div>
-
+      <h1 id="text">All Awesome Books</h1>
+      <div class="collection"></div>
+      <div class="blackBar"></div>
       <div id="myinputs">
+        <h2>Add a new book</h2>
         <input type="text" id="title" placeholder="Title" />
-        <br /><br />
+        <br />
         <input type="text" id="author" placeholder="Author" />
-        <br /><br />
+        <br />
         <button type="submit" id="addBookBtn">Add</button>
         <!-- <p id="error"></p> -->
       </div>
