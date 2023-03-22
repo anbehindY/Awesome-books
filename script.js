@@ -126,3 +126,5 @@ const list = () => {
   contactSection.classList.remove('active');
   addSection.classList.remove('active');
 }
+
+document.getElementById('dateNtime').innerHTML = new Date();
