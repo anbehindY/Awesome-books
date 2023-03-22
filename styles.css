@@ -37,6 +37,23 @@ a#add {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-top: 7%;
+}
+
+.list {
+  width: 100%;
+  margin-top: 6%;
+  display: none;
+}
+
+.list.active {
+  display: block;
+}
+
+.text {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+  font-weight: 900;
 }
 
 .collection {
@@ -69,32 +86,55 @@ a#add {
   height: 90%;
   background: none;
   border: 2px solid black;
-  box-shadow: 2px 2px;
+  box-shadow: 3px 3px;
 }
 
-.blackBar {
-  width: 100px;
-  height: 2px;
-  background-color: #262626;
+.addNew {
+  display: none;
+  justify-content: center;
+  margin-top: 10%;
+}
+
+.addNew.active {
+  display: flex;
 }
 
 #myinputs {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 60%;
 }
 
 #title,
 #author {
-  width: 250px;
-  height: 30px;
+  width: 100%;
+  height: 35px;
+  padding: 10px;
   border: 2px solid black;
-  box-shadow: 1px 1px;
+  box-shadow: 2px 2px;
 }
 
 #addBookBtn {
   align-self: flex-end;
   background: none;
   border: 2px solid black;
-  box-shadow: 2px 2px;
+  box-shadow: 3px 3px;
+  width: 70px;
+  height: 30px;
+}
+
+.contact {
+  display: none;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 10%;
+  font-size: 1em;
+  font-weight: 600;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.contact.active {
+  display: flex;
 }
