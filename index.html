@@ -12,18 +12,18 @@
     <header>
       <nav>
         <a id="logo" href="#">Awesome Books</a>
-        <a href="#list">List</a>
-        <a id="add" href="">Add new</a>
-        <a href="">Contact</a>
+        <a id="listNav" onclick="list()" href="#">List</a>
+        <a id="addNewNav" onclick="addNew()" href="#">Add new</a>
+        <a id="contactNav" onclick="contact()" href="#">Contact</a>
       </nav>
     </header>
-    <section id="list">
-        <h1 id="text">All Awesome Books</h1>
+    <section class="list active">
+        <h1 class="text">All Awesome Books</h1>
         <div class="collection"></div>
     </section>
-    <section id="addNew">
+    <section class="addNew">
       <div id="myinputs">
-        <h2>Add a new book</h2>
+        <h1 class="text">Add a new book</h1>
         <input type="text" id="title" placeholder="Title" />
         <br />
         <input type="text" id="author" placeholder="Author" />
@@ -31,10 +31,9 @@
         <button type="submit" id="addBookBtn">Add</button>
       </div>
     </section>
-    <section id="contact">
-      <h1>Contact information</h1>
-      <p>Do you have any question or you just want to say "Hello"?</p>
-      <p>You can reach out to us!</p>
+    <section class="contact">
+      <h1 class="text">Contact information</h1>
+      <p>Do you have any question or you just want to say "Hello"?<br>You can reach out to us!</p>
       <ul>
         <li>Our email: mail@mail.com</li>
         <li>Our phone number: +959952993613</li>
