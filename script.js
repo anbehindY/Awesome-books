@@ -104,3 +104,25 @@ class BookCollectionTemplate {
 
 const bookCollection = new BookCollectionTemplate();
 bookCollection.init();
+
+const listSection = document.querySelector('.list');
+const addSection = document.querySelector('.addNew');
+const contactSection = document.querySelector('.contact');
+
+const addNew = () => {
+  listSection.classList.remove('active');
+  contactSection.classList.remove('active');
+  addSection.classList.add('active');
+};
+
+const contact = () => {
+  listSection.classList.remove('active');
+  contactSection.classList.add('active');
+  addSection.classList.remove('active');
+}
+
+const list = () => {
+  listSection.classList.add('active');
+  contactSection.classList.remove('active');
+  addSection.classList.remove('active');
+}
