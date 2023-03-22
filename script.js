@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 const inputTitle = document.querySelector('#title');
 const inputAuthor = document.querySelector('#author');
 const bookUI = document.querySelector('.collection');
