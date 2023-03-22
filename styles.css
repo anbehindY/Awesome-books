@@ -2,6 +2,37 @@
   box-sizing: border-box;
 }
 
+header {
+  display: flex;
+  align-items: center;
+}
+
+nav {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  gap: 2%;
+  border: 2px solid black;
+  padding: 1% 4%;
+}
+
+nav > a {
+  text-decoration: none;
+  font-weight: 700;
+  color: #262626;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+a#logo {
+  margin-right: auto;
+}
+
+a#add {
+  padding: 0 2%;
+  border-right: 2px solid black;
+  border-left: 2px solid black;
+}
+
 .container {
   display: flex;
   flex-direction: column;
