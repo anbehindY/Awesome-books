@@ -117,7 +117,7 @@ const list = () => {
   listSection.classList.add('active');
   listNav.classList.add('active');
   contactSection.classList.remove('active');
-  contactSection.classList.remove('active');
+  contactNav.classList.remove('active');
   addSection.classList.remove('active');
   addNewNav.classList.remove('active');
 };
