@@ -12,15 +12,16 @@
     <header>
       <nav>
         <a id="logo" href="#">Awesome Books</a>
-        <a href="">List</a>
+        <a href="#list">List</a>
         <a id="add" href="">Add new</a>
         <a href="">Contact</a>
       </nav>
     </header>
-    <section class="container">
-      <h1 id="text">All Awesome Books</h1>
-      <div class="collection"></div>
-      <div class="blackBar"></div>
+    <section id="list">
+        <h1 id="text">All Awesome Books</h1>
+        <div class="collection"></div>
+    </section>
+    <section id="addNew">
       <div id="myinputs">
         <h2>Add a new book</h2>
         <input type="text" id="title" placeholder="Title" />
@@ -28,8 +29,17 @@
         <input type="text" id="author" placeholder="Author" />
         <br />
         <button type="submit" id="addBookBtn">Add</button>
-        <!-- <p id="error"></p> -->
       </div>
+    </section>
+    <section id="contact">
+      <h1>Contact information</h1>
+      <p>Do you have any question or you just want to say "Hello"?</p>
+      <p>You can reach out to us!</p>
+      <ul>
+        <li>Our email: mail@mail.com</li>
+        <li>Our phone number: +959952993613</li>
+        <li>Our address: Linpin street, 1B/267,YANGON,MYANMAR</li>
+      </ul>
     </section>
     <script src="script.js"></script>
   </body>
