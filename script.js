@@ -119,12 +119,12 @@ const contact = () => {
   listSection.classList.remove('active');
   contactSection.classList.add('active');
   addSection.classList.remove('active');
-}
+};
 
 const list = () => {
   listSection.classList.add('active');
   contactSection.classList.remove('active');
   addSection.classList.remove('active');
-}
+};
 
 document.getElementById('dateNtime').innerHTML = new Date();
