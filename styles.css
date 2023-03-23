@@ -2,6 +2,13 @@
   box-sizing: border-box;
 }
 
+body {
+  min-height: 98vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 header {
   display: flex;
   align-items: center;
@@ -20,7 +27,8 @@ nav {
   text-decoration: none;
   font-weight: 700;
   color: #262626;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+    'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 .navItems.active {
@@ -65,6 +73,7 @@ a#addNewNav {
   border: 2px solid black;
   height: auto;
   margin-bottom: 30px;
+  display: none;
 }
 
 .book {
@@ -148,4 +157,12 @@ a#addNewNav {
   font-weight: 600;
   font-size: 0.8em;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+footer {
+  border: 2px solid black;
+  padding: 1% 4%;
+  font-weight: 700;
+  color: #262626;
+  margin-top: auto;
 }
