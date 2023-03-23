@@ -33,6 +33,10 @@ This is Our Awesome Books Project. We used _HTML, CSS & JAVASCRIPT_ to create th
 
 ## 🛠 Built With <a name="built-with"></a>
 
+- HTML
+- CSS
+- JAVASCRIPT
+
 ### Tech Stack <a name="tech-stack"></a>
 
 <details>
@@ -87,7 +91,7 @@ In order to run this project you need:
 
 Clone this repository to your desired folder:
 
-> Opend CMD, Terminal or GitBash in your pc and type this
+> Opend CMD, Terminal or GitBash in your pc and type this (replace 'my-folder' with the name of your desired folder)
 
 ```sh
   cd my-folder
@@ -95,6 +99,8 @@ Clone this repository to your desired folder:
 ```sh
   git clone git@github.com:anbehindY/Awesome-books.git
 ```
+
+
 ### Usage
 
 To run the project, execute the following command:
@@ -104,17 +110,13 @@ To run the project, execute the following command:
 ```
 > click live server button and go live
 
+
 ### Install
 
 > You can simply clone this project you don't need to install anything in your pc because it is a webpage.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## 🛠 Built With <a name="built-with"></a>
-
-- HTML
-- CSS
-- JAVASCRIPT
 
 <!-- AUTHORS -->
 
