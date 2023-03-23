@@ -10,10 +10,6 @@ const listNav = document.getElementById('listNav');
 const addNewNav = document.getElementById('addNewNav');
 const contactNav = document.getElementById('contactNav');
 
-listNav.addEventListener('click', ()=>list());
-addNewNav.addEventListener('click', ()=>addNew());
-contactNav.addEventListener('click', ()=>contact());
-
 const list = () => {
   listSection.classList.add('active');
   listNav.classList.add('active');
@@ -41,6 +37,9 @@ const contact = () => {
   addNewNav.classList.remove('active');
 };
 
+listNav.addEventListener('click', () => list());
+addNewNav.addEventListener('click', () => addNew());
+contactNav.addEventListener('click', () => contact());
 document.getElementById('dateNtime').innerHTML = new Date();
 
 class BookCollectionTemplate {
