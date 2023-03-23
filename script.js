@@ -3,6 +3,45 @@ const inputAuthor = document.querySelector('#author');
 const bookUI = document.querySelector('.collection');
 const addBookBtn = document.querySelector('#addBookBtn');
 
+const listSection = document.querySelector('.list');
+const addSection = document.querySelector('.addNew');
+const contactSection = document.querySelector('.contact');
+const listNav = document.getElementById('listNav');
+const addNewNav = document.getElementById('addNewNav');
+const contactNav = document.getElementById('contactNav');
+
+const list = () => {
+  listSection.classList.add('active');
+  listNav.classList.add('active');
+  contactSection.classList.remove('active');
+  contactNav.classList.remove('active');
+  addSection.classList.remove('active');
+  addNewNav.classList.remove('active');
+};
+
+const addNew = () => {
+  listSection.classList.remove('active');
+  listNav.classList.remove('active');
+  contactSection.classList.remove('active');
+  contactNav.classList.remove('active');
+  addSection.classList.add('active');
+  addNewNav.classList.add('active');
+};
+
+const contact = () => {
+  listSection.classList.remove('active');
+  listNav.classList.remove('active');
+  contactSection.classList.add('active');
+  contactNav.classList.add('active');
+  addSection.classList.remove('active');
+  addNewNav.classList.remove('active');
+};
+
+listNav.addEventListener('click', (list));
+addNewNav.addEventListener('click', (addNew));
+contactNav.addEventListener('click', (contact));
+document.getElementById('dateNtime').innerHTML = new Date();
+
 class BookCollectionTemplate {
   constructor() {
     this.BOOKS_KEY = 'awesome-books';
@@ -28,18 +67,23 @@ class BookCollectionTemplate {
     bookUI.innerHTML = '';
 
     for (let i = 0; i < this.bookCollection.length; i += 1) {
+      if (i > -1) {
+        bookUI.style.display = 'block';
+      } else {
+        bookUI.style.display = 'none';
+      }
       if (i % 2 === 0) {
         bookUI.innerHTML += `
-    <div class="book gray">
-      <div class="book-description">"${this.bookCollection[i].title}" by ${this.bookCollection[i].author}</div>
-      <button class="removeBookBtn Btn-${i}">Remove</button>
-    </div>`;
+       <div class="book gray">
+       <div class="book-description">"${this.bookCollection[i].title}" by ${this.bookCollection[i].author}</div>
+       <button class="removeBookBtn Btn-${i}">Remove</button>
+       </div>`;
       } else {
         bookUI.innerHTML += `
-    <div class="book">
-      <div class="book-description">"${this.bookCollection[i].title}" by ${this.bookCollection[i].author}</div>
-      <button class="removeBookBtn Btn-${i}">Remove</button>
-    </div>`;
+       <div class="book">
+       <div class="book-description">"${this.bookCollection[i].title}" by ${this.bookCollection[i].author}</div>
+       <button class="removeBookBtn Btn-${i}">Remove</button>
+       </div>`;
       }
     }
   }
@@ -75,6 +119,7 @@ class BookCollectionTemplate {
         inputAuthor.value = '';
         this.saveBooks();
         this.displayBookCollection();
+        list();
       }
     }
   }

@@ -36,7 +36,7 @@ This is Our Awesome Books Project. We used _HTML, CSS & JAVASCRIPT_ to create th
 ### Tech Stack <a name="tech-stack"></a>
 
 <details>
-  <summary>Clien</summary>
+  <summary>Client</summary>
   <ul>
     <li><a href="https://www.w3schools.com/html/">HTML</a></li>
      <li><a href="https://www.w3schools.com/css/">CSS</a></li>
@@ -62,9 +62,9 @@ This is Our Awesome Books Project. We used _HTML, CSS & JAVASCRIPT_ to create th
 
 ### Key Features <a name="key-features"></a>
 
-- **[Html structure with Button, Inputs, etc]**
-- **[Styling css with colors, borders, paddings, margins & sizes, etc]**
-  \_ **[javascript functions, localStroage, objects, arrays, variables, etc]**
+- **Html structure with Button, Inputs, etc**
+- **Styling css with colors, borders, paddings, margins & sizes, etc**
+- **javascript functions, localStroage, objects, arrays, variables, etc**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -130,8 +130,8 @@ This is this link for this project \_https://github.com/peter-akhigbe/New-Awesom
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **A page body**
-- [ ] **More CSS styles**
+- [ ] **CSS transitions**
+- [ ] **Further asthetics CSS**
 - [ ] **JavaScript functionalties**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -142,7 +142,7 @@ This is this link for this project \_https://github.com/peter-akhigbe/New-Awesom
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](../../issues/).
+- https://github.com/anbehindY/Awesome-books/issues
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -150,11 +150,13 @@ Feel free to check the [issues page](../../issues/).
 
 ## ⭐️ Show your support <a name="support"></a>
 
-If you like this project...
+If you like this project, please give a star.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- ACKNOWLEDGEMENTS -->
+
+I would like to thank Microverse, my learning partners and every single Youtube channel.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -162,6 +164,6 @@ If you like this project...
 
 ## 📝 License <a name="license"></a>
 
-This project is [[MIT](https://choosealicense.com/licenses/mit/)](./LICENSE) licensed.
+This project is [MIT](./LICENSE.md) licensed.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
