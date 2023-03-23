@@ -37,9 +37,9 @@ const contact = () => {
   addNewNav.classList.remove('active');
 };
 
-listNav.addEventListener('click', () => list());
-addNewNav.addEventListener('click', () => addNew());
-contactNav.addEventListener('click', () => contact());
+listNav.addEventListener('click', (list));
+addNewNav.addEventListener('click', (addNew));
+contactNav.addEventListener('click', (contact));
 document.getElementById('dateNtime').innerHTML = new Date();
 
 class BookCollectionTemplate {
