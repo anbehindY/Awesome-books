@@ -25,13 +25,17 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 [Awesome Books] <a name="about-project"></a>
+# 📖 Awesome Books <a name="about-project"></a>
 
 This is Our Awesome Books Project. We used _HTML, CSS & JAVASCRIPT_ to create this Awesome Books Project.
 
 **[Webpage]**
 
 ## 🛠 Built With <a name="built-with"></a>
+
+- HTML
+- CSS
+- JAVASCRIPT
 
 ### Tech Stack <a name="tech-stack"></a>
 
@@ -64,7 +68,7 @@ This is Our Awesome Books Project. We used _HTML, CSS & JAVASCRIPT_ to create th
 
 - **Html structure with Button, Inputs, etc**
 - **Styling css with colors, borders, paddings, margins & sizes, etc**
-- **javascript functions, localStroage, objects, arrays, variables, etc**
+- **Javascript functions, localStroage, objects, arrays, variables, etc**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -76,36 +80,43 @@ To get a local copy up and running, follow these steps.
 
 ### Prerequisites
 
-In order to run this project you need: to Clone the repo.
+In order to run this project you need:
+
+ - Google Chrome (or any browser)
+ - Git
+ - Visual studio code (or other code editors)
 
 
 ### Setup
 
 Clone this repository to your desired folder:
-_ Opend CMD, Terminal or GitBash in your pc and type this
-\_git clone command \_https://github.com/peter-akhigbe/New-Awesome-Book.git_
 
+> Opend CMD, Terminal or GitBash in your pc and type this (replace 'my-folder' with the name of your desired folder)
 
-### Install
-
-Install this project with:
-\_ You can simply clone this project you don't need to install anything in your pc because it is a webpage.
+```sh
+  cd my-folder
+```
+```sh
+  git clone git@github.com:anbehindY/Awesome-books.git
+```
 
 
 ### Usage
 
 To run the project, execute the following command:
-_ You can use it by download in your computer.
-This is this link for this project \_https://github.com/peter-akhigbe/New-Awesome-Book.git_
 
+```sh
+  code .
+```
+> click live server button and go live
+
+
+### Install
+
+> You can simply clone this project you don't need to install anything in your pc because it is a webpage.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## 🛠 Built With <a name="built-with"></a>
-
-- HTML
-- CSS
-- JAVASCRIPT
 
 <!-- AUTHORS -->
 
