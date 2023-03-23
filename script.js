@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 const inputTitle = document.querySelector('#title');
 const inputAuthor = document.querySelector('#author');
 const bookUI = document.querySelector('.collection');
@@ -10,6 +9,10 @@ const contactSection = document.querySelector('.contact');
 const listNav = document.getElementById('listNav');
 const addNewNav = document.getElementById('addNewNav');
 const contactNav = document.getElementById('contactNav');
+
+listNav.addEventListener('click', ()=>list());
+addNewNav.addEventListener('click', ()=>addNew());
+contactNav.addEventListener('click', ()=>contact());
 
 const list = () => {
   listSection.classList.add('active');
